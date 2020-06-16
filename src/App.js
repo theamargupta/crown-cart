@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
+import HomePage from './homepage/home-comp.jsx'
 
 function App() {
-  return (
-    <div>
-      Hello React!
-    </div>
-  );
+  return (<div>
+      <HomePage />
+    </div>)
+  
 }
 
 export default App;
