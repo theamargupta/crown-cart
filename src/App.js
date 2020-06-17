@@ -1,16 +1,16 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import React from 'react';
+import { Route } from 'react-router-dom';
 
-import "./App.css";
-import HomePage from "./pages/homepage/home-comp";
+import './App.css';
+import HomePage from './pages/homepage/home-comp';
 
 function App() {
   return (
     <div>
-      <Route exact path="/" component={HomePage} />
+      <Route exact path='/' component={HomePage} />
     </div>
   );
 }
 
 export default App;
-//video 3
+// video 3
