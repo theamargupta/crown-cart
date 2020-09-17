@@ -5,7 +5,7 @@ import HomePage from './pages/homepage/home-comp';
 import ShopPage from './pages/shop/shop-comp';
 import Header from './component/header/header-comp';
 import SignInUp from './pages/sign-in-up/sign-comp';
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import './App.css';
 
 class App extends React.Component {
@@ -20,8 +20,8 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.setState({ currentUser: user });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
+      createUserProfileDocument(user);
       console.log(user);
     });
   }
@@ -45,4 +45,4 @@ class App extends React.Component {
 }
 
 export default App;
-// video 3
+// video 12 14.25
